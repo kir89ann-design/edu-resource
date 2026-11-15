@@ -1,0 +1,505 @@
+/* =========================================================================
+   ЭОР «Возобновляемая энергетика» — общие стили сайта
+   Подключается на всех страницах.
+   ========================================================================= */
+
+/* ---------- Переменные ---------- */
+:root {
+  /* Корпоративная палитра — светлая тема */
+  --brand-accent: #0e5a67;        /* RGB 14; 90; 103   */
+  --brand-accent-dark: #0a4550;   /* затемнённый для hover */
+  --brand-accent-soft: #e6f0f2;   /* очень светлый фон для плашек */
+
+  --text: #000000;                /* RGB 0; 0; 0      */
+  --text-muted: #4a4f55;
+  --bg: #ffffff;                  /* RGB 255; 255; 255 */
+  --bg-soft: #f2f5f6;             /* нейтральный серый фон блоков */
+  --border: #d5dde0;
+
+  /* Семантика — оставляем узнаваемой */
+  --ok: #2e7d32;
+  --err: #c62828;
+  --warn: #b26a00;
+
+  /* Совместимость: старые имена ссылаются на новые */
+  --primary: var(--brand-accent);
+  --primary-dark: var(--brand-accent-dark);
+  --primary-light: #2a7b8a;
+
+  /* Геометрия */
+  --radius: 8px;
+  --radius-sm: 6px;
+  --header-h: 60px;
+
+  /* Тени */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, .10);
+
+  /* Типографика */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Анимации */
+  --transition: .15s ease;
+}
+
+/* ---------- Тёмная тема ---------- */
+[data-theme="dark"] {
+  --brand-accent: #9dd800;        /* RGB 157; 216; 0  */
+  --brand-accent-dark: #8ec400;   /* затемнённый для hover */
+  --brand-accent-soft: #1c2400;   /* тёмно-оливковый фон плашек */
+
+  --text: #ffffff;                /* RGB 255; 255; 255 */
+  --text-muted: #b0b4b8;
+  --bg: #000000;                  /* RGB 0; 0; 0      */
+  --bg-soft: #121212;
+  --border: #2a2a2a;
+
+  --ok: #7bd67b;
+  --err: #ff7b7b;
+  --warn: #ffc56b;
+
+  --primary: var(--brand-accent);
+  --primary-dark: var(--brand-accent-dark);
+  --primary-light: #b6e34a;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .45);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, .6);
+}
+/* ---------- Сброс / нормализация ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  transition: background-color var(--transition), color var(--transition);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Типографика ---------- */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 .6em;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--text);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.05rem; }
+
+p {
+  margin: 0 0 1em;
+}
+
+ul, ol {
+  margin: 0 0 1em;
+  padding-left: 1.4em;
+}
+
+li {
+  margin: .25em 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+  font-size: .92em;
+}
+
+code {
+  background: var(--bg-soft);
+  padding: .1em .4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background: var(--bg-soft);
+  padding: 1em;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: .6em 1em;
+  border-left: 3px solid var(--primary);
+  background: var(--bg-soft);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+
+/* ---------- Доступность ---------- */
+.visually-hidden,
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Уважение к настройкам ОС */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Шапка ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0 1.2rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: saturate(180%) blur(6px);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--primary);
+  margin-right: auto;
+  letter-spacing: .5px;
+}
+
+.logo:hover {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.site-header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: .35rem .6rem;
+  border-radius: var(--radius-sm);
+  font-size: .95rem;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.site-header nav a[aria-current="page"],
+.site-header nav a:hover {
+  background: var(--bg-soft);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+#theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+#theme-toggle:hover {
+  background: var(--bg-soft);
+  border-color: var(--primary);
+}
+
+/* ---------- Подвал ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .9rem;
+  margin-top: 3rem;
+  background: var(--bg);
+}
+
+.site-footer p {
+  margin: .3em 0;
+}
+
+.site-footer a {
+  color: var(--primary);
+}
+
+/* ---------- Кнопки ---------- */
+.btn-primary,
+.btn-ghost,
+.btn-link {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.2;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition),
+              color var(--transition),
+              border-color var(--transition),
+              transform var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4em;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid var(--primary);
+  padding: .6rem 1.2rem;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-primary:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: .55rem 1.1rem;
+}
+
+.btn-ghost:hover {
+  background: var(--bg-soft);
+  text-decoration: none;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  padding: .2rem 0;
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.btn-link:hover {
+  color: var(--primary-dark);
+}
+
+/* ---------- Формы (общие) ---------- */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+/* ---------- Утилиты ---------- */
+.text-muted { color: var(--text-muted); }
+.text-center { text-align: center; }
+.text-ok { color: var(--ok); }
+.text-err { color: var(--err); }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: .5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 2rem; }
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: .5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 2rem; }
+
+.hidden { display: none !important; }
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 900px) {
+  .site-header {
+    padding: 0 .8rem;
+    gap: .8rem;
+  }
+  .site-header nav ul {
+    gap: .4rem;
+  }
+  .site-header nav a {
+    font-size: .88rem;
+    padding: .3rem .45rem;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+
+  .site-header {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: var(--header-h);
+    padding: .5rem .8rem;
+  }
+
+  .site-header nav {
+    width: 100%;
+    order: 3;
+  }
+
+  .site-header nav ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #theme-toggle {
+    margin-left: auto;
+  }
+
+  .site-footer {
+    margin-top: 2rem;
+    padding: 1.2rem .8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header nav a {
+    font-size: .8rem;
+    padding: .25rem .35rem;
+  }
+  .btn-primary,
+  .btn-ghost {
+    padding: .5rem .9rem;
+    font-size: .95rem;
+  }
+}
+
+/* ---------- Печать ---------- */
+@media print {
+  .site-header,
+  .site-footer,
+  #theme-toggle,
+  .btn-primary,
+  .btn-ghost,
+  .btn-link {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 12pt;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .site-footer {
+    display: none;
+  }
+
+  main {
+    max-width: 100%;
+  }
+}

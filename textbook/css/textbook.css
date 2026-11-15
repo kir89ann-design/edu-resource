@@ -1,0 +1,599 @@
+/* =========================================================================
+   Учебник: оглавление, главы, иллюстрации, термины, навигация
+   Подключается после style.css на страницах textbook/*
+   ========================================================================= */
+
+/* =========================================================================
+   1. ОГЛАВЛЕНИЕ (textbook/index.html)
+   ========================================================================= */
+.toc {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.2rem;
+  width: 100%;
+}
+
+.toc h1 {
+  font-size: 1.8rem;
+  margin: 0 0 1.5rem;
+  color: var(--primary);
+}
+
+.toc-group {
+  margin-bottom: 2rem;
+}
+
+.toc-group h2 {
+  font-size: 1.15rem;
+  color: var(--primary);
+  margin: 0 0 .6rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.toc-list {
+  padding-left: 1.6rem;
+  margin: 0;
+}
+
+.toc-list li,
+.toc-group ul li {
+  margin: .5rem 0;
+  padding: .35rem .2rem;
+  line-height: 1.5;
+}
+
+.toc-list li::marker {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.toc-list li a,
+.toc-group ul li a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color var(--transition);
+}
+
+.toc-list li a:hover,
+.toc-group ul li a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Статус прохождения главы */
+.status {
+  display: inline-block;
+  font-size: .85rem;
+  margin-left: .6rem;
+  padding: .1rem .5rem;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  vertical-align: middle;
+  line-height: 1.4;
+}
+
+.status[data-state="done"] {
+  color: var(--ok);
+  background: rgba(46, 125, 50, .12);
+  font-weight: 600;
+}
+
+.status[data-state="progress"] {
+  color: var(--warn);
+  background: rgba(178, 106, 0, .12);
+  font-weight: 600;
+}
+
+.status[data-state="none"] {
+  color: var(--text-muted);
+}
+
+/* Общий прогресс */
+.progress-summary {
+  margin-top: 2rem;
+  padding: 1.1rem 1.2rem;
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+
+.progress-summary #total-progress {
+  color: var(--primary);
+  font-size: 1.1em;
+}
+
+/* =========================================================================
+   2. РАСКЛАДКА ГЛАВЫ
+   ========================================================================= */
+.chapter-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  max-width: 1240px;
+  margin: 1.5rem auto;
+  padding: 0 1.2rem;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .chapter-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ---------- Сайдбар главы ---------- */
+.chapter-sidebar {
+  position: sticky;
+  top: calc(var(--header-h) + 1rem);
+  align-self: start;
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  font-size: .95rem;
+  border: 1px solid var(--border);
+  max-height: calc(100vh - var(--header-h) - 2rem);
+  overflow-y: auto;
+}
+
+@media (max-width: 960px) {
+  .chapter-sidebar {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+.chapter-sidebar h2 {
+  font-size: 1rem;
+  margin: 0 0 .7rem;
+  color: var(--primary);
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+#topic-nav {
+  padding-left: 1.2rem;
+  margin: 0 0 .9rem;
+  list-style: decimal;
+}
+
+#topic-nav li {
+  margin: .35rem 0;
+}
+
+#topic-nav a {
+  display: block;
+  padding: .25rem .4rem;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  text-decoration: none;
+  font-size: .92rem;
+  line-height: 1.4;
+  transition: background-color var(--transition),
+              color var(--transition);
+}
+
+#topic-nav a:hover {
+  background: rgba(44, 90, 160, .08);
+  color: var(--primary);
+}
+
+#topic-nav a.active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+#chapter-progress {
+  width: 100%;
+  height: 8px;
+  border: none;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--border);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#chapter-progress::-webkit-progress-bar {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+#chapter-progress::-webkit-progress-value {
+  background: var(--primary);
+  border-radius: 999px;
+  transition: width .3s ease;
+}
+
+#chapter-progress::-moz-progress-bar {
+  background: var(--primary);
+  border-radius: 999px;
+}
+
+/* =========================================================================
+   3. КОНТЕНТ ГЛАВЫ
+   ========================================================================= */
+.chapter-content {
+  min-width: 0;
+  max-width: 820px;
+}
+
+.chapter-content > h1 {
+  font-size: 1.7rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.3;
+  color: var(--text);
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+.chapter-content h2 {
+  font-size: 1.3rem;
+  margin: 2.2rem 0 .8rem;
+  color: var(--primary-dark);
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+
+.chapter-content h3 {
+  font-size: 1.1rem;
+  margin: 1.6rem 0 .6rem;
+  color: var(--text);
+}
+
+.chapter-content p {
+  margin: .8rem 0;
+  line-height: 1.7;
+}
+
+.chapter-content ul,
+.chapter-content ol {
+  margin: .8rem 0 1rem 1.4rem;
+  padding: 0;
+}
+
+.chapter-content li {
+  margin: .35rem 0;
+  line-height: 1.65;
+}
+
+.chapter-content section {
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+
+/* =========================================================================
+   4. ИЛЛЮСТРАЦИИ И ЛАЙТБОКС
+   ========================================================================= */
+.figure {
+  margin: 1.4rem 0;
+  text-align: center;
+}
+
+.figure img.zoomable,
+figure img.zoomable {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: var(--radius);
+  cursor: zoom-in;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 1px solid var(--border);
+}
+
+.figure img.zoomable:hover,
+figure img.zoomable:hover {
+  transform: scale(1.01);
+  box-shadow: var(--shadow-md);
+}
+
+.figure figcaption,
+figure figcaption {
+  font-size: .9rem;
+  color: var(--text-muted);
+  margin-top: .55rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Лайтбокс */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+  padding: 2vh 2vw;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 6px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, .5);
+  cursor: default;
+  background: #fff;
+}
+
+.lightbox::after {
+  content: "ESC или клик — закрыть";
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, .7);
+  font-size: .85rem;
+  pointer-events: none;
+}
+
+/* =========================================================================
+   5. ВСПЛЫВАЮЩИЕ ОПРЕДЕЛЕНИЯ
+   ========================================================================= */
+.term {
+  border-bottom: 1px dashed var(--primary);
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0 1px;
+  transition: background-color var(--transition);
+}
+
+.term:hover {
+  background: rgba(44, 90, 160, .08);
+}
+
+.term:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.term-popup {
+  position: absolute;
+  z-index: 900;
+  max-width: 360px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 36px 14px 16px;
+  box-shadow: var(--shadow-md);
+  font-size: .95rem;
+  line-height: 1.55;
+  animation: termIn .15s ease;
+}
+
+@keyframes termIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.term-popup h4 {
+  margin: 0 0 .5rem;
+  color: var(--primary);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.term-popup p {
+  margin: 0;
+}
+
+.term-popup .close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--text-muted);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.term-popup .close:hover {
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+/* =========================================================================
+   6. ПЕЙДЖЕР МЕЖДУ ГЛАВАМИ
+   ========================================================================= */
+.chapter-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.chapter-pager a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary);
+  padding: .55rem .9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  transition: background-color var(--transition),
+              border-color var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.chapter-pager a:hover {
+  background: var(--bg-soft);
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+/* =========================================================================
+   7. ВОПРОСЫ ДЛЯ САМОПРОВЕРКИ
+   ========================================================================= */
+.self-check {
+  list-style: decimal;
+  padding-left: 1.4rem;
+}
+
+.self-check details {
+  background: var(--bg-soft);
+  border-radius: var(--radius-sm);
+  padding: .6rem .9rem;
+  margin: .6rem 0;
+  border: 1px solid var(--border);
+}
+
+.self-check details[open] {
+  background: var(--bg);
+}
+
+.self-check summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  padding-left: 1.4rem;
+  line-height: 1.45;
+}
+
+.self-check summary::-webkit-details-marker {
+  display: none;
+}
+
+.self-check summary::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary);
+  transition: transform var(--transition);
+  display: inline-block;
+}
+
+.self-check details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.self-check p {
+  margin: .6rem 0 .2rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* =========================================================================
+   8. АДАПТИВ
+   ========================================================================= */
+@media (max-width: 720px) {
+  .toc {
+    margin: 1.2rem auto;
+    padding: 0 1rem;
+  }
+  .toc h1 { font-size: 1.5rem; }
+
+  .chapter-layout {
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+
+  .chapter-content > h1 { font-size: 1.4rem; }
+  .chapter-content h2 { font-size: 1.15rem; }
+
+  .chapter-pager {
+    flex-direction: column;
+  }
+  .chapter-pager a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .term-popup {
+    max-width: calc(100vw - 24px);
+    font-size: .92rem;
+  }
+
+  .status {
+    display: block;
+    margin: .3rem 0 0;
+    width: fit-content;
+  }
+}
+
+/* =========================================================================
+   9. ПЕЧАТЬ
+   ========================================================================= */
+@media print {
+  .chapter-sidebar,
+  .chapter-pager,
+  .lightbox,
+  .term-popup,
+  .status,
+  #chapter-progress {
+    display: none !important;
+  }
+
+  .chapter-layout {
+    display: block;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .chapter-content {
+    max-width: 100%;
+  }
+
+  .chapter-content > h1 {
+    border-bottom: 1px solid #000;
+    color: #000;
+  }
+
+  .chapter-content h2 {
+    color: #000;
+  }
+
+  .figure img.zoomable,
+  figure img.zoomable {
+    box-shadow: none;
+    border: 1px solid #000;
+    cursor: default;
+  }
+
+  .term {
+    border-bottom: none;
+    color: #000;
+    cursor: default;
+  }
+
+  .self-check details {
+    background: #fff;
+    border: 1px solid #000;
+  }
+
+  .self-check details p {
+    color: #000;
+  }
+
+  details[open] summary::before,
+  .self-check summary::before {
+    content: "";
+  }
+}

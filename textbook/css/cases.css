@@ -1,0 +1,430 @@
+/* =========================================================================
+   Кейс-задания в главах учебника
+   Подключается после quiz.css на страницах textbook/chNN.html
+   ========================================================================= */
+
+/* =========================================================================
+   1. ОБЩАЯ ОБЁРТКА
+   ========================================================================= */
+.cases-title {
+  font-size: 1.15rem;
+  margin: .4rem 0 1.2rem;
+  color: var(--text);
+}
+
+#cases {
+  margin-top: .5rem;
+}
+
+/* =========================================================================
+   2. КАРТОЧКА КЕЙСА
+   ========================================================================= */
+.case-card {
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+  margin: 1.2rem 0;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  transition: box-shadow var(--transition);
+}
+
+.case-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Шапка ---------- */
+.case-header {
+  margin-bottom: .6rem;
+}
+
+.case-header h3 {
+  margin: 0 0 .3rem;
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.case-num {
+  color: var(--primary);
+  font-weight: 700;
+  margin-right: .3rem;
+}
+
+.case-comp {
+  font-size: .85rem;
+  color: var(--text-muted);
+  margin-bottom: .4rem;
+  line-height: 1.4;
+}
+
+/* ---------- Ситуация и задание ---------- */
+.case-situation,
+.case-task {
+  margin: .7rem 0;
+  line-height: 1.6;
+  font-size: .97rem;
+}
+
+.case-situation strong,
+.case-task strong {
+  color: var(--primary-dark);
+}
+
+.case-task {
+  font-weight: 500;
+}
+
+/* =========================================================================
+   3. ТЕЛО КЕЙСА (ПОЛЯ ОТВЕТА)
+   ========================================================================= */
+.case-body {
+  margin: 1rem 0 .8rem;
+}
+
+/* ---------- Textarea (open / multi) ---------- */
+.case-card textarea {
+  width: 100%;
+  min-height: 90px;
+  font: inherit;
+  font-size: .97rem;
+  padding: .7rem .85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+  line-height: 1.55;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.case-card textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(44, 90, 160, .15);
+  outline: none;
+}
+
+.case-card textarea::placeholder {
+  color: var(--text-muted);
+  opacity: .7;
+}
+
+/* ---------- Варианты выбора (choice) ---------- */
+.case-option {
+  display: block;
+  padding: .45rem .6rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition);
+  line-height: 1.5;
+  user-select: none;
+}
+
+.case-option:hover {
+  background: rgba(44, 90, 160, .08);
+}
+
+.case-option input {
+  margin-right: .5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.case-option input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ---------- Числовой ответ (number) ---------- */
+.case-number-wrap {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.case-number-wrap input[type="number"] {
+  flex: 1;
+  min-width: 140px;
+  font: inherit;
+  font-size: .97rem;
+  padding: .6rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.case-number-wrap input[type="number"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(44, 90, 160, .15);
+  outline: none;
+}
+
+.case-unit {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: .95rem;
+}
+
+/* =========================================================================
+   4. ПОДЗАДАЧИ (multi)
+   ========================================================================= */
+.case-subtask {
+  margin: .9rem 0;
+  padding: .9rem 1rem;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.subtask-text {
+  font-weight: 500;
+  margin-bottom: .5rem;
+  line-height: 1.5;
+  font-size: .96rem;
+}
+
+.subtask-text strong {
+  color: var(--primary);
+  margin-right: .25rem;
+}
+
+.case-subtask textarea {
+  min-height: 70px;
+  font-size: .94rem;
+}
+
+/* =========================================================================
+   5. ПОДСКАЗКИ И РЕШЕНИЕ
+   ========================================================================= */
+.case-hint-block {
+  margin: .8rem 0;
+  padding: .8rem 1rem;
+  background: rgba(178, 106, 0, .08);
+  border-left: 3px solid var(--warn);
+  border-radius: var(--radius-sm);
+  font-size: .95rem;
+  line-height: 1.55;
+}
+
+.case-hint-block strong {
+  color: var(--warn);
+}
+
+.case-hint {
+  font-size: .9rem;
+  margin-top: .4rem;
+  padding: .5rem .7rem;
+  background: rgba(178, 106, 0, .06);
+  border-left: 2px solid var(--warn);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.case-solution {
+  margin: .9rem 0 0;
+  padding: .9rem 1rem;
+  background: var(--bg);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.case-solution strong {
+  color: var(--primary);
+  display: inline-block;
+  margin-bottom: .2rem;
+}
+
+/* =========================================================================
+   6. КНОПКИ ДЕЙСТВИЙ
+   ========================================================================= */
+.case-actions {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin: .9rem 0 .6rem;
+  align-items: center;
+}
+
+.case-actions button {
+  font-family: inherit;
+  font-size: .92rem;
+}
+
+.case-actions .btn-primary,
+.case-actions .btn-ghost {
+  padding: .5rem .95rem;
+}
+
+/* =========================================================================
+   7. ФИДБЕК ПО ПРОВЕРКЕ (choice / number)
+   ========================================================================= */
+.case-feedback {
+  margin-top: .8rem;
+  padding: .8rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: .95rem;
+  line-height: 1.55;
+  border-left: 3px solid transparent;
+}
+
+.case-feedback.ok {
+  background: rgba(46, 125, 50, .1);
+  border-left-color: var(--ok);
+  color: var(--text);
+}
+
+.case-feedback.fail {
+  background: rgba(198, 40, 40, .1);
+  border-left-color: var(--err);
+  color: var(--text);
+}
+
+.case-feedback.warn {
+  background: rgba(178, 106, 0, .1);
+  border-left-color: var(--warn);
+  color: var(--text);
+}
+
+.case-feedback b {
+  font-weight: 700;
+}
+
+/* =========================================================================
+   8. САМООЦЕНКА
+   ========================================================================= */
+.case-self-assess {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding-top: .9rem;
+  border-top: 1px dashed var(--border);
+  font-size: .9rem;
+  color: var(--text-muted);
+}
+
+.case-self-assess > span {
+  font-weight: 600;
+  color: var(--text);
+  margin-right: .2rem;
+}
+
+.case-self-assess .btn-ghost {
+  font-size: .88rem;
+  padding: .4rem .8rem;
+}
+
+.case-self-note {
+  font-size: .88rem;
+  color: var(--text-muted);
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  margin-left: .2rem;
+}
+
+/* =========================================================================
+   9. АДАПТИВ
+   ========================================================================= */
+@media (max-width: 720px) {
+  .case-card {
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .case-header h3 {
+    font-size: 1.05rem;
+  }
+
+  .case-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .case-actions button {
+    width: 100%;
+  }
+
+  .case-self-assess {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .4rem;
+  }
+
+  .case-self-assess .btn-ghost {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .case-card {
+    padding: .9rem .8rem;
+  }
+
+  .case-card textarea,
+  .case-number-wrap input[type="number"] {
+    font-size: .93rem;
+  }
+
+  .case-option {
+    padding: .4rem .45rem;
+    font-size: .94rem;
+  }
+}
+
+/* =========================================================================
+   10. ПЕЧАТЬ
+   ========================================================================= */
+@media print {
+  .case-actions,
+  .case-self-assess,
+  .case-hint-block,
+  .case-hint {
+    display: none !important;
+  }
+
+  .case-card {
+    background: #fff !important;
+    border: 1px solid #000;
+    border-left-width: 4px;
+    box-shadow: none;
+    page-break-inside: avoid;
+    margin: .8rem 0;
+  }
+
+  .case-situation,
+  .case-task {
+    color: #000;
+  }
+
+  .case-card textarea {
+    display: none; /* ответ пользователя выводится отдельным блоком при печати */
+  }
+
+  .case-solution {
+    display: block !important;
+    background: #fff !important;
+    border-left: 1px solid #000;
+    color: #000;
+  }
+
+  .case-solution strong {
+    color: #000;
+  }
+
+  .case-feedback {
+    background: #fff !important;
+    border: 1px solid #000;
+    border-left-width: 3px;
+    color: #000;
+  }
+}
