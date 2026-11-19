@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t9f1">
+  <title id="t9f1">Схема роли аккумулирования энергии в энергосистеме</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Роль аккумулирования в энергосистеме</text>
+  <!-- Выработка -->
+  <rect x="60" y="100" width="200" height="100" rx="10" fill="#38a169"/>
+  <text x="160" y="145" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff" font-weight="bold">Выработка ВИЭ</text>
+  <text x="160" y="170" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#e2e8f0">нестабильна</text>
+  <!-- Накопитель -->
+  <rect x="300" y="100" width="200" height="100" rx="10" fill="#2b6cb0"/>
+  <text x="400" y="145" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff" font-weight="bold">Накопитель</text>
+  <text x="400" y="170" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#e2e8f0">заряд / разряд</text>
+  <!-- Потребление -->
+  <rect x="540" y="100" width="200" height="100" rx="10" fill="#dd6b20"/>
+  <text x="640" y="145" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff" font-weight="bold">Потребление</text>
+  <text x="640" y="170" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#fff">график нагрузки</text>
+  <!-- Стрелки -->
+  <line x1="260" y1="150" x2="300" y2="150" stroke="#4a5568" stroke-width="3"/>
+  <line x1="500" y1="150" x2="540" y2="150" stroke="#4a5568" stroke-width="3"/>
+  <!-- График -->
+  <polyline points="100,380 180,320 260,360 340,300 420,340 500,310 580,350 660,300 720,340" fill="none" stroke="#2b6cb0" stroke-width="3"/>
+  <line x1="80" y1="390" x2="740" y2="390" stroke="#4a5568" stroke-width="2"/>
+  <text x="400" y="430" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#4a5568">Сглаживание колебаний выработки и потребления</text>
+</svg>

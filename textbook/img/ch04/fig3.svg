@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t4f2">
+  <title id="t4f2">Схема приливной электростанции</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Приливная электростанция</text>
+  <!-- Море -->
+  <rect x="60" y="180" width="680" height="200" fill="#bee3f8"/>
+  <!-- Плотина -->
+  <rect x="380" y="140" width="40" height="240" fill="#718096"/>
+  <!-- Турбины -->
+  <circle cx="340" cy="300" r="18" fill="#2b6cb0"/>
+  <circle cx="460" cy="300" r="18" fill="#2b6cb0"/>
+  <path d="M340,282 L340,318 M322,300 L358,300" stroke="#fff" stroke-width="2"/>
+  <path d="M460,282 L460,318 M442,300 L478,300" stroke="#fff" stroke-width="2"/>
+  <!-- Стрелки прилива -->
+  <path d="M120,230 L260,230" stroke="#dd6b20" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M540,230 L660,230" stroke="#dd6b20" stroke-width="4" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#dd6b20"/>
+    </marker>
+  </defs>
+  <text x="400" y="130" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1f2937">Плотина</text>
+  <text x="400" y="420" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#4a5568">Прилив → наполнение бассейна; отлив → выработка</text>
+</svg>

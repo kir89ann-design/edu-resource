@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t6f2">
+  <title id="t6f2">Схема работы теплового насоса: испаритель, компрессор, конденсатор, расширительный клапан</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Цикл теплового насоса</text>
+  <rect x="150" y="120" width="500" height="240" rx="20" fill="none" stroke="#4a5568" stroke-width="3"/>
+  <rect x="130" y="200" width="80" height="80" rx="8" fill="#2b6cb0"/>
+  <text x="170" y="245" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fff">Испаритель</text>
+  <circle cx="400" cy="120" r="40" fill="#38a169"/>
+  <text x="400" y="125" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fff">Компрессор</text>
+  <rect x="590" y="200" width="80" height="80" rx="8" fill="#dd6b20"/>
+  <text x="630" y="245" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fff">Конденсатор</text>
+  <rect x="360" y="340" width="80" height="40" rx="8" fill="#805ad5"/>
+  <text x="400" y="365" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fff">Клапан</text>
+  <path d="M210,240 L360,240" stroke="#4a5568" stroke-width="2"/>
+  <path d="M400,160 L400,340" stroke="#4a5568" stroke-width="2"/>
+  <path d="M590,240 L440,240" stroke="#4a5568" stroke-width="2"/>
+  <text x="400" y="430" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#4a5568">COP = Qпол / Aзатр</text>
+</svg>

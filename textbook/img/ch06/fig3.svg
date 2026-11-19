@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t6f3">
+  <title id="t6f3">Схема применения теплового насоса в системе отопления здания</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Тепловой насос в системе отопления</text>
+  <!-- Дом -->
+  <rect x="440" y="150" width="280" height="200" fill="#e2e8f0" stroke="#4a5568" stroke-width="2"/>
+  <polygon points="440,150 580,80 720,150" fill="#dd6b20"/>
+  <rect x="540" y="260" width="60" height="90" fill="#2b6cb0"/>
+  <text x="580" y="330" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fff">Дом</text>
+  <!-- Тепловой насос -->
+  <rect x="120" y="220" width="120" height="80" rx="8" fill="#38a169"/>
+  <text x="180" y="265" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Тепловой насос</text>
+  <!-- Трубы -->
+  <line x1="240" y1="260" x2="440" y2="260" stroke="#dd6b20" stroke-width="6"/>
+  <!-- Грунт -->
+  <rect x="60" y="360" width="680" height="60" fill="#7b341e"/>
+  <text x="400" y="395" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Грунт / источник тепла</text>
+  <!-- Зонд -->
+  <line x1="180" y1="300" x2="180" y2="380" stroke="#4a5568" stroke-width="4"/>
+</svg>

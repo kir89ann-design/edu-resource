@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t5f2">
+  <title id="t5f2">Схема геотермальной электростанции</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Геотермальная электростанция</text>
+  <!-- Земля -->
+  <rect x="60" y="260" width="680" height="120" fill="#7b341e"/>
+  <text x="400" y="410" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Геотермальный резервуар</text>
+  <!-- Скважина -->
+  <rect x="380" y="160" width="40" height="140" fill="#718096"/>
+  <!-- Пар -->
+  <path d="M360,160 C340,120 360,100 340,80" stroke="#dd6b20" stroke-width="3" fill="none"/>
+  <path d="M400,160 C380,120 400,100 380,80" stroke="#dd6b20" stroke-width="3" fill="none"/>
+  <path d="M440,160 C420,120 440,100 420,80" stroke="#dd6b20" stroke-width="3" fill="none"/>
+  <!-- Турбина -->
+  <circle cx="400" cy="70" r="18" fill="#2b6cb0"/>
+  <path d="M400,52 L400,88 M382,70 L418,70" stroke="#fff" stroke-width="2"/>
+  <!-- Генератор -->
+  <rect x="440" y="50" width="60" height="40" rx="6" fill="#dd6b20"/>
+  <text x="470" y="75" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fff">Ген</text>
+  <line x1="500" y1="70" x2="600" y2="70" stroke="#4a5568" stroke-width="3"/>
+</svg>

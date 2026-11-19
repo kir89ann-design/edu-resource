@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t1f1">
+  <title id="t1f1">Структура мирового потребления энергии по видам топлива</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Мировое потребление энергии по видам топлива</text>
+  <!-- Нефть -->
+  <rect x="120" y="120" width="560" height="40" fill="#2b6cb0"/>
+  <text x="110" y="146" text-anchor="end" font-family="sans-serif" font-size="16" fill="#1f2937">Нефть</text>
+  <text x="690" y="146" font-family="sans-serif" font-size="16" fill="#ffffff">33%</text>
+  <!-- Уголь -->
+  <rect x="120" y="180" width="480" height="40" fill="#4a5568"/>
+  <text x="110" y="206" text-anchor="end" font-family="sans-serif" font-size="16" fill="#1f2937">Уголь</text>
+  <text x="610" y="206" font-family="sans-serif" font-size="16" fill="#ffffff">27%</text>
+  <!-- Газ -->
+  <rect x="120" y="240" width="380" height="40" fill="#dd6b20"/>
+  <text x="110" y="266" text-anchor="end" font-family="sans-serif" font-size="16" fill="#1f2937">Газ</text>
+  <text x="510" y="266" font-family="sans-serif" font-size="16" fill="#ffffff">24%</text>
+  <!-- ВИЭ -->
+  <rect x="120" y="300" width="220" height="40" fill="#38a169"/>
+  <text x="110" y="326" text-anchor="end" font-family="sans-serif" font-size="16" fill="#1f2937">ВИЭ</text>
+  <text x="350" y="326" font-family="sans-serif" font-size="16" fill="#ffffff">14%</text>
+  <!-- АЭС -->
+  <rect x="120" y="360" width="60" height="40" fill="#805ad5"/>
+  <text x="110" y="386" text-anchor="end" font-family="sans-serif" font-size="16" fill="#1f2937">АЭС</text>
+  <text x="190" y="386" font-family="sans-serif" font-size="16" fill="#ffffff">2%</text>
+</svg>

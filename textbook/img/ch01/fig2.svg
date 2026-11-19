@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t1f2">
+  <title id="t1f2">Классификация природных ресурсов</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Классификация природных ресурсов</text>
+  <!-- Корень -->
+  <rect x="300" y="80" width="200" height="50" rx="8" fill="#2b6cb0"/>
+  <text x="400" y="112" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">Природные ресурсы</text>
+  <!-- Ветви -->
+  <line x1="400" y1="130" x2="400" y2="160" stroke="#4a5568" stroke-width="2"/>
+  <line x1="200" y1="160" x2="600" y2="160" stroke="#4a5568" stroke-width="2"/>
+  <line x1="200" y1="160" x2="200" y2="190" stroke="#4a5568" stroke-width="2"/>
+  <line x1="600" y1="160" x2="600" y2="190" stroke="#4a5568" stroke-width="2"/>
+  <rect x="80" y="190" width="240" height="50" rx="8" fill="#38a169"/>
+  <text x="200" y="222" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">Возобновляемые</text>
+  <rect x="480" y="190" width="240" height="50" rx="8" fill="#dd6b20"/>
+  <text x="600" y="222" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">Невозобновляемые</text>
+  <!-- Возобновляемые -->
+  <text x="200" y="290" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1f2937">Солнце · Ветер · Вода</text>
+  <text x="200" y="315" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1f2937">Геотермальное тепло · Биомасса</text>
+  <!-- Невозобновляемые -->
+  <text x="600" y="290" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1f2937">Нефть · Газ · Уголь</text>
+  <text x="600" y="315" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1f2937">Уран</text>
+</svg>

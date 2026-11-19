@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t5f1">
+  <title id="t5f1">Геотермальный разрез Земли с температурным градиентом</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Геотермальный разрез Земли</text>
+  <!-- Слои -->
+  <rect x="80" y="80" width="640" height="60" fill="#a0aec0"/>
+  <rect x="80" y="140" width="640" height="80" fill="#dd6b20"/>
+  <rect x="80" y="220" width="640" height="80" fill="#c05621"/>
+  <rect x="80" y="300" width="640" height="80" fill="#7b341e"/>
+  <!-- Подписи -->
+  <text x="400" y="115" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Кора</text>
+  <text x="400" y="185" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Мантия (верхняя)</text>
+  <text x="400" y="265" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Мантия (нижняя)</text>
+  <text x="400" y="345" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Ядро</text>
+  <!-- Градиент -->
+  <text x="400" y="410" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#4a5568">Температура растёт с глубиной на 25–30 °C на км</text>
+</svg>

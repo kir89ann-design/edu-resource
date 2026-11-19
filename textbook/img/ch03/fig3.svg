@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t3f3">
+  <title id="t3f3">Схема методов оценки ветрового потенциала</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Методы оценки ветрового потенциала</text>
+  <rect x="80" y="100" width="300" height="120" rx="12" fill="#2b6cb0"/>
+  <text x="230" y="150" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Измерительный</text>
+  <text x="230" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f0">Анемометры, мачты</text>
+
+  <rect x="420" y="100" width="300" height="120" rx="12" fill="#38a169"/>
+  <text x="570" y="150" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Статистический</text>
+  <text x="570" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f0">Ряды наблюдений, роза ветров</text>
+
+  <rect x="80" y="250" width="300" height="120" rx="12" fill="#dd6b20"/>
+  <text x="230" y="300" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Модельный</text>
+  <text x="230" y="330" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Расчёт ветрового потока</text>
+
+  <rect x="420" y="250" width="300" height="120" rx="12" fill="#805ad5"/>
+  <text x="570" y="300" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Картографический</text>
+  <text x="570" y="330" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f0">Ветровые атласы</text>
+</svg>

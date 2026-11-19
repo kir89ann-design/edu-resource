@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t7f1">
+  <title id="t7f1">Схема источников биомассы</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Источники биомассы</text>
+  <rect x="60" y="100" width="320" height="120" rx="12" fill="#38a169"/>
+  <text x="220" y="150" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Древесные отходы</text>
+  <text x="220" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f0">Щепа, опилки, пеллеты</text>
+
+  <rect x="420" y="100" width="320" height="120" rx="12" fill="#dd6b20"/>
+  <text x="580" y="150" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Растениеводство</text>
+  <text x="580" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Солома, лузга</text>
+
+  <rect x="60" y="250" width="320" height="120" rx="12" fill="#805ad5"/>
+  <text x="220" y="300" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Животноводство</text>
+  <text x="220" y="330" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f0">Навоз, биогаз</text>
+
+  <rect x="420" y="250" width="320" height="120" rx="12" fill="#2b6cb0"/>
+  <text x="580" y="300" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Бытовые отходы</text>
+  <text x="580" y="330" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f0">Органика, энергокультуры</text>
+</svg>

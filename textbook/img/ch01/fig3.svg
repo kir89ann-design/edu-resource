@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t1f3">
+  <title id="t1f3">Направления рационального использования ресурсов</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Направления рационального использования ресурсов</text>
+  <!-- 4 блока -->
+  <rect x="80" y="100" width="300" height="120" rx="12" fill="#2b6cb0"/>
+  <text x="230" y="150" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Технологическое</text>
+  <text x="230" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f0">Модернизация оборудования</text>
+
+  <rect x="420" y="100" width="300" height="120" rx="12" fill="#38a169"/>
+  <text x="570" y="150" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Организационное</text>
+  <text x="570" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f0">Учёт, нормирование, аудит</text>
+
+  <rect x="80" y="250" width="300" height="120" rx="12" fill="#dd6b20"/>
+  <text x="230" y="300" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Структурное</text>
+  <text x="230" y="330" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#fff">Изменение структуры</text>
+
+  <rect x="420" y="250" width="300" height="120" rx="12" fill="#805ad5"/>
+  <text x="570" y="300" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Поведенческое</text>
+  <text x="570" y="330" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e2e8f0">Энергосберегающие привычки</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t8f2">
+  <title id="t8f2">Классификация вторичных энергетических ресурсов</title>
+  <rect width="800" height="450" fill="#f7f9fc"/>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#1f2937">Классификация ВЭР</text>
+  <rect x="300" y="80" width="200" height="50" rx="8" fill="#2b6cb0"/>
+  <text x="400" y="112" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">ВЭР</text>
+  <line x1="400" y1="130" x2="400" y2="160" stroke="#4a5568" stroke-width="2"/>
+  <line x1="160" y1="160" x2="640" y2="160" stroke="#4a5568" stroke-width="2"/>
+  <line x1="160" y1="160" x2="160" y2="190" stroke="#4a5568" stroke-width="2"/>
+  <line x1="400" y1="160" x2="400" y2="190" stroke="#4a5568" stroke-width="2"/>
+  <line x1="640" y1="160" x2="640" y2="190" stroke="#4a5568" stroke-width="2"/>
+  <rect x="60" y="190" width="200" height="50" rx="8" fill="#38a169"/>
+  <text x="160" y="222" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">Горючие</text>
+  <rect x="300" y="190" width="200" height="50" rx="8" fill="#dd6b20"/>
+  <text x="400" y="222" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">Тепловые</text>
+  <rect x="540" y="190" width="200" height="50" rx="8" fill="#805ad5"/>
+  <text x="640" y="222" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">Избыточного давления</text>
+  <text x="160" y="290" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1f2937">Доменный, коксовый газ</text>
+  <text x="400" y="290" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1f2937">Пар, горячая вода</text>
+  <text x="640" y="290" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1f2937">Газы под давлением</text>
+</svg>
